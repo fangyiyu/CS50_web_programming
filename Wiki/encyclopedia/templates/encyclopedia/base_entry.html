@@ -1,0 +1,36 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %} Encyclopedia {% endblock %}
+{% block body_content %}
+
+
+	<!-- Navigation control-->
+		<ul class="nav">
+			<!-- Home -->
+			<li class="nav-item">
+				<a class="nav-link active" href="{% url 'index' %}">
+					<button class="mx-2 btn px-4 btn-outline-success">
+						Home
+					</button>
+				</a>
+			</li>
+			<!-- Edit Entry-->
+			<li class="nav-item">
+				<a class="nav-link active" href="{% url 'create_update' title %}">
+					<button class="btn btn-outline-warning">Edit</button>
+				</a>
+			</li>
+		
+	<!-- Navigation control-->
+
+	<!-- Entry Content -->
+	<div id="base_entry_content" class="p-2 mt-5">
+		<h1 class="title text-secondary font-weight-bolder">
+			{{title}}
+		</h1>
+		<hr class="my-n2">
+		<div id="ei_content" class="content-container my-3 py-3">
+			{{ entry|safe }}
+		</div>
+	</div>
+	<!-- Entry Content -->
+{% endblock %}
