@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Addition Game</title>
+    <style>
+        #app {
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        #problem {
+            font-size: 72px;
+        }
+
+        #score {
+            font-size: 27px;
+        }
+
+        #winner {
+            font-size: 123px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" />
+    <script type="text/babel">
+
+        class App extends React.Component {
+
+            // constructor is called when a component is first created, it will always take props (properties) as an argument, 
+            // and the first line will always be super(props), which sets up the object based on the React.Component class.
+            constructor(props) {
+                super(props);
+                // Initialize the state of the component, which is a JS object that stores information about the component.
+                this.state = {
+                    num1: 1,
+                    num2: 3,
+                    response: "",
+                    score: 0,
+                };
+            }
+
+            render() {
+                if (this.state.score === 10) {
+                    return (
+                        <div id="winner">
+                            You won!
+                        </div>
+                    );
+                }
+                return (
+                    <div>
+                        <div id="problem">{this.state.num1} + {this.state.num2}</div>
+                        <input onKeyPress={this.inputKeyPress} onChange={this.updateResponse} value={this.state.response}></input>
+                        <div id="score">Score: {this.state.score}</div>
+                    </div>
+                );
+            }
+
+            inputKeyPress = (event) =>{
+                if (event.key === 'Enter'){
+                    const answer = parseInt(this.state.response);
+                    if (answer === this.state.num1 + this.state.num2) {
+                        this.setState(state => ({
+                            score: state.score + 1,
+                            num1: Math.ceil(Math.random()*10),
+                            num2: Math.ceil(Math.random()*10),
+                            response: ""
+                        }));
+                    } else {
+                        this.setState(state=>({
+                            score: state.score - 1,
+                            response: ""
+                        }));
+                    }
+                }
+            }
+            updateResponse = (event) => {
+                this.setState({
+                    response: event.target.value
+                });
+            }
+        }   
+            ReactDOM.render(<App />, document.querySelector("#app"));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- React defines components and their behavior -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <!-- ReactDOM takes React components and inserts them into the DOM -->
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel translates from JSX, the language written in React, to plain JavaScript that our browers can interpret. -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Hello</title>
+  </head>
+  <body>
+    <div id="app" />
+    <!-- Tell the browser the  following script needs to be translated using Babel -->
+    <script type="text/babel">
+
+      // Componnets in React are classes in JS, the following will allow us to start creating a component without 
+      // rewriting a lot of code included in the React.Component class definition
+      class App extends React.Component {
+
+        // All components are required to have the render function, and whatever is returned within the funciton will be added to the DOM
+        render() {
+          return (
+            <div>
+              <h1>Welcome</h1>
+              Hello!
+            </div>
+          );
+        }
+      }
+
+      // ReactDOM.render(a component to render, an element in the DOM inside of which the component should be rendered)
+      ReactDOM.render(<App />, document.querySelector("#app"));
+
+    </script>
+  </body>
+</html>
