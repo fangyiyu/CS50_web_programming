@@ -1,0 +1,13 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+    <h1>Add Task</h1>
+    # Post method is used whenever a form could alter the state of the web page.
+    <form action="{% url 'tasks:add' %}" method="post">
+        # CSRF attack is that a malicious user attempts to send a request to your server from somewhere other than your site.
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+    <a href="{% url 'tasks:index' %}">View All Tasks</a>
+{% endblock %}
