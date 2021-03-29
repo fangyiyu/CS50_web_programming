@@ -14,8 +14,8 @@
 - touch Procfile
 - In Procfile: web:gunicorn LOCATION.wsgi
 - In settings.py:
-1. Add '0.0.0.0' and NAME.herokuapp.com to ALLOWED_HOSTS 
-2. Add import os and STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+  1. Add '0.0.0.0' and NAME.herokuapp.com to ALLOWED_HOSTS 
+  2. Add import os and STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 - pip freeze > requirements.txt
 - git add.
 - git commit -m "added procfile and requirements"
