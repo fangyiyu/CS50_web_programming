@@ -1,5 +1,7 @@
 name: Testing
 on: push
+      branches:
+        - tutorials
 
 jobs:
   test_project:
