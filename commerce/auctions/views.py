@@ -6,7 +6,6 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from .models import User,Bid,Listing,Comment,Watchlist,Closedbid,Alllisting
 from datetime import datetime
-from django.contrib.auth.decorators import login_required
 
 def index(request):
     items=Listing.objects.all()
