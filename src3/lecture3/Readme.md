@@ -31,4 +31,7 @@
 - Check which environment you are in: which python or which pip
 - Remove an environment: sudo rm -rf <my_env_name>
 
+### Delete packages in Mac terminal  
+pip3 freeze | xargs pip3 uninstall -y
+
 
