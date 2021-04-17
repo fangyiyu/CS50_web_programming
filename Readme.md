@@ -1,3 +1,4 @@
+# Cheatsheets
 ## Django terminal Commands
 - ```django-admin startproject PROJECT_NAME```
 - ```python3 manage.py runserver```
