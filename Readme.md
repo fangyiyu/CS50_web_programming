@@ -48,4 +48,9 @@ In the Django project, do
   4. Through grid.
   5. Including bootstrap in our html head by adding: ```<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">```
 
+## CS50_web_programming
+
+[Harvard CS50 Web programming with Python and JavaScript Web page](https://cs50.harvard.edu/web/2020/)
+
+[Youtube lectures](https://www.youtube.com/watch?v=Nn7EX3zkGUo&list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu)
 
