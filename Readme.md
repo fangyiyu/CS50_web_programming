@@ -28,7 +28,6 @@ In the Django project, do
 - ```pip freeze > requirements.txt```
 - ```git add .```
 - ```git commit -m "added procfile and requirements"```
-- ```heroku config:set DISABLE_COLLECTSTATIC=1```
 - ```git push heroku master```
 
 If the error exists and console tells you to disable collectstatic, run the following:
