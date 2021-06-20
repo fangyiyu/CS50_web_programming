@@ -9,8 +9,8 @@
 - For static files, in setting.py, in MIDDLEWARE , add ```'whitenoise.middleware.WhiteNoiseMiddleware'``` after ```'django.middleware.security.SecurityMiddleware'.```, and install whitenoise.
 - For security reasons:
   1. Turn DEBUG to False;
-  2. In settings.py: Add ```'0.0.0.0'``` and ```NAME.herokuapp.com``` to ALLOWED_HOSTS; 
-  3. Add ```from decouple import config```, change SECRET KEY to ```SECRET_KEY = config('SECRET_KEY')```;
+  2. In settings.py: Ad```NAME.herokuapp.com``` to ALLOWED_HOSTS; 
+  3. Add ```from decouple import config```, ```pip install python-decouple```, and change SECRET KEY to ```SECRET_KEY = config('SECRET_KEY')```;
   4. Add .env file in the root directory; In the .env file, add ```SECRET KEY = <your secret key>```;
   5. Add .gitignore in the root directory; In the .gitignore file, add ```.env```.
 
