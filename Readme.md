@@ -41,6 +41,7 @@ If the error exists and console tells you to disable collectstatic, run the foll
 - Check if I have virtualenv by command: ```which virtualenv```, if not, install it in terminal by ```pip install virtualenv```
 - Create a virtual environment by ```virtualenv <my_env_name>```
 - Activate it by ```source <my_env_name>/bin/activate```
+- Check the pacages installed in an environment: ```pip list```
 - Deactivate: ```deactivate```
 - Check which environment you are in: ```which python``` or ```which pip```
 - Remove an environment: ```sudo rm -rf <my_env_name>```
