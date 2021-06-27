@@ -36,6 +36,7 @@ If the error exists and console tells you to disable collectstatic, run the foll
 - ```heroku run python manage.py migrate```
 - ```heroku run 'bower install --config.interactive=false;grunt prep;python manage.py collectstatic --noinput'```
 - ```heroku config:unset DISABLE_COLLECTSTATIC```
+- ```heroku config:set SECRET_KEY='Your secret key'``` if SECRET_KEY is not found.
 
 ## Create a Virtual Environment on Mac
 - Check if I have virtualenv by command: ```which virtualenv```, if not, install it in terminal by ```pip install virtualenv```
