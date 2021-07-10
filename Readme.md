@@ -30,11 +30,11 @@ In the Django project, do
 - ```git commit -m "added procfile and requirements"```
 - ```heroku config:set DISABLE_COLLECTSTATIC=1```
 - ```git push heroku master```
+- ```heroku config:set SECRET_KEY='Your secret key'```
 - ```heroku run python manage.py migrate```
 - ```heroku run 'bower install --config.interactive=false;grunt prep;python manage.py collectstatic --noinput'```
 - ```heroku config:unset DISABLE_COLLECTSTATIC```
-- ```heroku config:set SECRET_KEY='Your secret key'``` if SECRET_KEY is not found.
-
+- 
 ## Create a Virtual Environment on Mac
 - Check if I have virtualenv by command: ```which virtualenv```, if not, install it in terminal by ```pip install virtualenv```
 - Create a virtual environment by ```virtualenv <my_env_name>```
