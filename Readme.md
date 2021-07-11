@@ -50,6 +50,7 @@ If showing the error message: Your account has reached its concurrent build limi
 - Check which environment you are in: ```which python``` or ```which pip```
 - Remove an environment: ```sudo rm -rf <my_env_name>```
 - Delete packages in Mac terminal:```pip3 freeze | xargs pip3 uninstall -y```
+- TO uninstall every package in an vm, use: ```pip freeze > to-uninstall.txt```, then ```pip uninstall -r to-uninstall.txt```.
 
 ## Html and Css
 - Style an id using #id; style a class using .class; style an element using nothing.
