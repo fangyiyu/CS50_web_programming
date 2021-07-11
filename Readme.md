@@ -20,12 +20,6 @@
 - ```heroku create APP_NAME```
 - ```heroku git:remote -a APP-NAME```
 
-## Heroku issues
-If showing the error message: Your account has reached its concurrent build limit, use:
-- ```heroku plugins:install heroku-builds```
-- ```heroku builds:cancel```
-- ```heroku restart```
-
 In the Django project, do
 - ```pip install gunicorn``` if gunicorn is not installed before
 - ```gunicorn LOCATION.wsgi```
@@ -40,6 +34,12 @@ In the Django project, do
 - ```heroku run python manage.py migrate```
 - ```heroku run 'bower install --config.interactive=false;grunt prep;python manage.py collectstatic --noinput'```
 - ```heroku config:unset DISABLE_COLLECTSTATIC```
+
+## Heroku issues
+If showing the error message: Your account has reached its concurrent build limit, use:
+- ```heroku plugins:install heroku-builds```
+- ```heroku builds:cancel```
+- ```heroku restart```
 
 ## Create a Virtual Environment on Mac
 - Check if I have virtualenv by command: ```which virtualenv```, if not, install it in terminal by ```pip install virtualenv```
