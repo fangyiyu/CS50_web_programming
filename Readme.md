@@ -20,6 +20,12 @@
 - ```heroku create APP_NAME```
 - ```heroku git:remote -a APP-NAME```
 
+## Heroku issues
+If showing the error message: Your account has reached its concurrent build limit, use:
+- ```heroku plugins:install heroku-builds```
+- ```heroku builds:cancel```
+- ```heroku restart```
+
 In the Django project, do
 - ```pip install gunicorn``` if gunicorn is not installed before
 - ```gunicorn LOCATION.wsgi```
