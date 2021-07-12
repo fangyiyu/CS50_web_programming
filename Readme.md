@@ -46,6 +46,7 @@ If showing the error message: Your account has reached its concurrent build limi
 - Create a virtual environment by ```virtualenv <my_env_name>```
 - Activate it by ```source <my_env_name>/bin/activate```
 - Check the pacages installed in an environment: ```pip list```
+- Download from requirements.txt ```pip install -r requirements.txt```
 - Deactivate: ```deactivate```
 - Check which environment you are in: ```which python``` or ```which pip```
 - Remove an environment: ```sudo rm -rf <my_env_name>```
